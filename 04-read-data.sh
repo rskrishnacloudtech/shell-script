@@ -11,7 +11,7 @@ echo "Hello, $NAME"
 
 # To enter the value without showing on the screen.
 echo "Please enter your username: "
-read -s UASERNAME
+read -s USERNAME
 
 echo "Please enter your password: "
 read -s PASSWORD
