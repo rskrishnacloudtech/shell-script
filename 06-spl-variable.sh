@@ -4,13 +4,12 @@ var1=$1
 var2=$2
 
 echo "All the args passed to the script: $@"
-echo "Total number of args passed to the script: $#"
-
 for TOKEN in $* 
 do 
     echo $TOKEN 
 done
 
+echo "Total number of args passed to the script: $#"
 for TOKEN in $@
 do 
     echo $TOKEN
