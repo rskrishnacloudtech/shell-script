@@ -8,6 +8,10 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE_NAME=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+
 # Declaring a color codes to used in the logs.
 R="\e[31m"
 G="\e[32m"
@@ -34,8 +38,8 @@ else
 fi
 
 # Running the commands and validating the exit code and redirecting the command output to the log file.
-dnf install mysql -y &>> LOGFILE_NAME
+dnf install mysql -y &>> $LOGFILE_NAME
 VALIDATE $? "Installing MySQL"
 
-dnf install abcd -y &>> LOGFILE_NAME
+dnf install abcd -y &>> $LOGFILE_NAME
 VALIDATE $? "Installing ACBD"
