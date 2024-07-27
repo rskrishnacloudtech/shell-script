@@ -48,6 +48,7 @@ do
         then
             echo -e "Package $i is installed... $G SUCCESS $N" &>> LOGFILE_NAME
         else
-            echo -e "Package $i is not installed.. $R FAILED $N" &>> LOGFILE_NAME    
+            echo -e "Package $i is not installed.. $R FAILED $N" &>> LOGFILE_NAME  
+        fi  
     fi    
 done        
