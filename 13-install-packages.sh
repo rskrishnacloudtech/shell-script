@@ -37,7 +37,7 @@ fi
 for i in $@
 do
     echo "Package to install... $i"
-    dng list installed $i &>> LOGFILE_NAME
+    dnf list installed $i &>> LOGFILE_NAME
     if [ $? -ne 0 ]
     then
         echo -e "$i package is already installed... $Y SKIPPING $N" &>> LOGFILE_NAME
