@@ -6,6 +6,16 @@ var2=$2
 echo "All the args passed to the script: $@"
 echo "Total number of args passed to the script: $#"
 
+for TOKEN in $* 
+do 
+    echo $TOKEN 
+done
+
+for TOKEN in $@
+do 
+    echo $TOKEN
+done
+
 
 
 # echo "Name of the current running script: $0"
