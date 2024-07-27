@@ -18,5 +18,5 @@ read -s PASSWORD
 echo "Your username is: $USERNAME, and password is: $PASSWORD"
 
 # Reading and entering the data with a single command.
-read -p "Please enter the value" ENTEREDVALUE
-echo "Entered value is $ENTEREDVALUE"
+read -p "Please enter the value: " ENTEREDVALUE
+echo "Entered value is: $ENTEREDVALUE"
