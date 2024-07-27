@@ -44,7 +44,7 @@ do
     else
         echo "Installing $i" &>> $LOGFILE_NAME
         dnf install $i -y &>> $LOGFILE_NAME
-        if [ $? -ne 0 ]
+        if [ $? -eq 0 ]
         then
             echo -e "Package $i is installed... $G SUCCESS $N" &>> $LOGFILE_NAME
         else
