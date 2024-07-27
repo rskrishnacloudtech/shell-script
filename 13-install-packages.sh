@@ -43,7 +43,7 @@ do
         echo -e "$i package is already installed... $Y SKIPPING $N" &>> $LOGFILE_NAME
     else
         echo "Installing $i" &>> $LOGFILE_NAME
-        dnf intall $i -y &>> $LOGFILE_NAME
+        dnf install $i -y &>> $LOGFILE_NAME
         if [ $? -ne 0 ]
         then
             echo -e "Package $i is installed... $G SUCCESS $N" &>> $LOGFILE_NAME
