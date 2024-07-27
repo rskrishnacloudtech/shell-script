@@ -11,6 +11,7 @@ echo "Home folder of the present logged in user: $HOME"
 echo "Username of the current logged in user: $USER"
 echo "Hostname of the server: $HOSTNAME"
 echo "Process ID of the current running process: $$"
+sleep 30 &
 echo "Process ID of the last backgroud process: $!"
 echo "Status of the last run command: $?"
 echo "ith element passed to the script: $i"
