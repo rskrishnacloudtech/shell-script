@@ -37,18 +37,18 @@ fi
 for i in $@
 do
     echo "Package to install... $i"
-    dnf list installed $i &>> LOGFILE_NAME
+    dnf list installed $i &>> $LOGFILE_NAME
     if [ $? -ne 0 ]
     then
-        echo -e "$i package is already installed... $Y SKIPPING $N" &>> LOGFILE_NAME
+        echo -e "$i package is already installed... $Y SKIPPING $N" &>> $LOGFILE_NAME
     else
-        echo "Installing $i" &>> LOGFILE_NAME
-        dnf intall $i -y &>> LOGFILE_NAME
+        echo "Installing $i" &>> $LOGFILE_NAME
+        dnf intall $i -y &>> $LOGFILE_NAME
         if [ $? -ne 0 ]
         then
-            echo -e "Package $i is installed... $G SUCCESS $N" &>> LOGFILE_NAME
+            echo -e "Package $i is installed... $G SUCCESS $N" &>> $LOGFILE_NAME
         else
-            echo -e "Package $i is not installed.. $R FAILED $N" &>> LOGFILE_NAME  
+            echo -e "Package $i is not installed.. $R FAILED $N" &>> $LOGFILE_NAME  
         fi  
     fi    
 done        
