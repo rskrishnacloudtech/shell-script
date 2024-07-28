@@ -40,17 +40,15 @@ do
     dnf list installed $i &>> $LOGFILE_NAME
     if [ $? -eq 0 ]
     then
-        echo -e "$i package is already installed... $Y SKIPPING $N" &>> $LOGFILE_NAME
-        exit 1
+        echo -e "$i package is already installed... $Y SKIPPING $N"
     else
-        echo "Installing $i" &>> $LOGFILE_NAME
+        echo "Installing $i"
         dnf install $i -y &>> $LOGFILE_NAME
         if [ $? -eq 0 ]
         then
-            echo -e "Package $i is installed... $G SUCCESS $N" &>> $LOGFILE_NAME
-            exit 1
+            echo -e "Package $i is installed... $G SUCCESS $N"
         else
-            echo -e "Package $i is not installed.. $R FAILED $N" &>> $LOGFILE_NAME  
+            echo -e "Package $i is not installed.. $R FAILED $N"
         fi  
     fi    
 done        
