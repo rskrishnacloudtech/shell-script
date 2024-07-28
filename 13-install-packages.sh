@@ -42,13 +42,13 @@ do
     then
         echo -e "$i package is already installed... $Y SKIPPING $N"
     else
-        echo "Installing $i"
+        echo "Installing.... $i"
         dnf install $i -y &>> $LOGFILE_NAME
         if [ $? -eq 0 ]
         then
-            echo -e "Package $i is installed... $G SUCCESS $N"
+            echo -e "Package $i is installed. $G SUCCESS $N"
         else
-            echo -e "Package $i is not installed.. $R FAILED $N"
+            echo -e "Package $i is not installed. $R FAILED $N"
         fi  
     fi    
 done        
