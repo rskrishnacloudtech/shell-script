@@ -29,3 +29,4 @@ do
     echo -e "$Y Deleting the files... $N"
     rm -rf $line
 done <<< $files_to_delete
+
