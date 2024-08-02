@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Getting the source directory to find and delete the old files.
-source_dir="/home/ec2-user/logs_folder"
+source_dir=/home/ec2-user/logs_folder/
 
 # Declaring a color codes to used in the logs.
 R="\e[31m"
