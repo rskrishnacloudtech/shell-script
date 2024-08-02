@@ -13,13 +13,14 @@ N="\e[0m"
 if [ -d $source_dir ] 
 then
     echo -e "$R $source_dir is not exists. Please check manually once. $N"
+    exit 1
 else
     echo -e "$G $source_dir is exists. File will be found and deleted as per the requirement $N"
-    exit 1
+    
 fi
 
 # Finding the files in the above $source_dir which are created before 5 days with name .log.
-files_to_delete=$(find $source_dir -name "*.log" -mtime +5)
+files_to_delete=$(find $source_dir -name "*.log" -mtime +14)
 
 echo -e "$Y Files found to delete: $files_to_delete $N"
 
