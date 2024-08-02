@@ -12,11 +12,10 @@ N="\e[0m"
 # Check that directory is exists or not.
 if [ -d $source_dir ] 
 then
-    echo -e "$R $source_dir is not exists. Please check manually once. $N"
+    echo -e "$G $source_dir is exists. File will be found and deleted as per the requirement $N"
     exit 1
 else
-    echo -e "$G $source_dir is exists. File will be found and deleted as per the requirement $N"
-    
+    echo -e "$R $source_dir is not exists. Please check manually once. $N"    
 fi
 
 # Finding the files in the above $source_dir which are created before 5 days with name .log.
