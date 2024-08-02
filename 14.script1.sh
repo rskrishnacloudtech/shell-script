@@ -1,6 +1,6 @@
 #!/bin/bash
 
-course="Learing DevOps in script1"
+COURSE="Learing DevOps in script1"
 
 echo "Course from script1: $COURSE"
 echo "Process ID of script1: $$"
