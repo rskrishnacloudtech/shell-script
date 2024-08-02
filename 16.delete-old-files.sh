@@ -26,7 +26,7 @@ echo -e "$Y Files found to delete: $files_to_delete $N"
 # Deleting the files.
 while IFS= read -r line
 do
-    echo -e "$Y Deleting the files... $N"
+    echo -e "$Y Deleting the file... $line $N"
     rm -rf $line
 done <<< $files_to_delete
 
