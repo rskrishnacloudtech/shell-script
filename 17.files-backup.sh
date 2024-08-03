@@ -9,7 +9,7 @@ zipFileName="file-backup-$timestamp.zip"
 # Zipping the folder and moving into another folder.
 zip -r "$toFolder/$zipFileName" $fromFolder
 
-#
+# Checking that backup file is saved successfully or not.
 ls -l $toFolder | grep $zipFileName
 if [ $? -ne 0 ]
 then
