@@ -10,10 +10,11 @@ zipFileName="file-backup-$timestamp.zip"
 zip -r "$toFolder/$zipFileName" $fromFolder
 
 #
-ls -l $toFolder | grep zipFileName
-if [ $? -eq 0 ]
+ls -l $toFolder | grep $zipFileName
+if [ $? -ne 0 ]
 then
-    echo "Files has been backed up successfully."
-else
     echo "Files has NOT been backed up. Backup FAILED. Please review it once."
+    exit 1
+else
+    echo "Files has been backed up successfully."    
 fi
